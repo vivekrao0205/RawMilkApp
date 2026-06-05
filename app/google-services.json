@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "294465354146",
+    "project_id": "raw-milk-1e36d",
+    "storage_bucket": "raw-milk-1e36d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294465354146:android:d4f1fbf58b0b1bd1079afb",
+        "android_client_info": {
+          "package_name": "com.rawmilk.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294465354146-ehdcq2j15tljip23pv8pm3r0gi36l45o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rawmilk.app",
+            "certificate_hash": "32878509a7f3b7a4ebf9331627b0272d7146424d"
+          }
+        },
+        {
+          "client_id": "294465354146-k49nde7h7u4tlcdj8fvnfs76ni9g7p6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rawmilk.app",
+            "certificate_hash": "75ba7ef3b6f5bedd3b98c97b8ebaed4455628db4"
+          }
+        },
+        {
+          "client_id": "294465354146-m5f5dn7ubk3m2n1fhr6ih1ie53em041f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5oZwks7kmv6yzovam8nGaP1DbeeK8pUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294465354146-m5f5dn7ubk3m2n1fhr6ih1ie53em041f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

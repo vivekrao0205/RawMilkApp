@@ -1,0 +1,49 @@
+{
+  "packageId": "com.rawmilk.app",
+  "host": "www.rawmilk.in",
+  "name": "RawMilk",
+  "launcherName": "RawMilk",
+  "display": "standalone",
+  "themeColor": "#003822",
+  "themeColorDark": "#000000",
+  "navigationColor": "#F4F3ED",
+  "navigationColorDark": "#F4F3ED",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#F4F3ED",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://www.rawmilk.in/icon-512x512.png",
+  "maskableIconUrl": "https://www.rawmilk.in/icon-512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\Users\\Vivek\\Downloads\\RawMilkTWA\\android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1.1.15",
+  "appVersionCode": 16,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://www.rawmilk.in/manifest.json",
+  "fallbackType": "webview",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": false,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://www.rawmilk.in/",
+  "minSdkVersion": 21,
+  "orientation": "portrait",
+  "fingerprints": [
+    "A1:17:75:A8:7E:87:9C:8C:B8:6D:09:AD:51:E2:77:4E:E8:56:E7:17:9A:60:4F:A2:8F:80:5F:8C:E6:31:8A:BC"
+  ],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": ["window-controls-overlay", "standalone"],
+  "appVersion": "1.1.15"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="enableNotification">true</bool>
+    <bool name="enableSiteSettingsShortcut">false</bool>
+    <color name="backgroundColor">#F4F3ED</color>
+    <color name="colorPrimary">#003822</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="navigationColor">#F4F3ED</color>
+    <color name="navigationColorDark">#F4F3ED</color>
+    <color name="navigationDividerColor">#000000</color>
+    <color name="navigationDividerColorDark">#000000</color>
+    <integer name="splashScreenFadeOutDuration">300</integer>
+    <string name="appName" translatable="false">RawMilk</string>
+    <string name="displayMode" translatable="false">default</string>
+    <string name="fallbackType" translatable="false">webview</string>
+    <string name="fullScopeUrl" translatable="false">https://www.rawmilk.in/</string>
+    <string name="generatorApp" translatable="false">bubblewrap-cli</string>
+    <string name="hostName" translatable="false">www.rawmilk.in</string>
+    <string name="launchUrl" translatable="false">https://www.rawmilk.in/</string>
+    <string name="launcherName" translatable="false">Rawmilk</string>
+    <string name="orientation" translatable="false">portrait</string>
+    <string name="providerAuthority" translatable="false">com.rawmilk.app.fileprovider</string>
+    <string name="webManifestUrl" translatable="false">https://www.rawmilk.in/manifest.json</string>
+</resources>

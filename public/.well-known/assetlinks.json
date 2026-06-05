@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rawmilk.app",
+      "sha256_cert_fingerprints": [
+        "A1:17:75:A8:7E:87:9C:8C:B8:6D:09:AD:51:E2:77:4E:E8:56:E7:17:9A:60:4F:A2:8F:80:5F:8C:E6:31:8A:BC",
+        "C2:CF:B0:E8:6A:D5:7E:84:ED:F9:8A:FF:47:64:DC:98:9F:1A:59:BA:D7:D1:5F:10:E1:BB:DB:F9:C7:CA:AB:1D"
+      ]
+    }
+  }
+]
