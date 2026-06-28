@@ -20,8 +20,8 @@
     "path": "C:\\Users\\Vivek\\Downloads\\RawMilkTWA\\android.keystore",
     "alias": "android"
   },
-  "appVersionName": "1.1.15",
-  "appVersionCode": 16,
+  "appVersionName": "1.1.16",
+  "appVersionCode": 17,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://www.rawmilk.in/manifest.json",
@@ -34,7 +34,7 @@
   "isChromeOSOnly": false,
   "isMetaQuest": false,
   "fullScopeUrl": "https://www.rawmilk.in/",
-  "minSdkVersion": 21,
+  "minSdkVersion": 23,
   "orientation": "portrait",
   "fingerprints": [
     "A1:17:75:A8:7E:87:9C:8C:B8:6D:09:AD:51:E2:77:4E:E8:56:E7:17:9A:60:4F:A2:8F:80:5F:8C:E6:31:8A:BC"
@@ -45,5 +45,5 @@
   "fileHandlers": [],
   "launchHandlerClientMode": "",
   "displayOverride": ["window-controls-overlay", "standalone"],
-  "appVersion": "1.1.15"
+  "appVersion": "1.1.16"
 }

@@ -58,10 +58,10 @@ android {
     namespace "com.rawmilk.app"
     defaultConfig {
         applicationId "com.rawmilk.app"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 35
-        versionCode 16
-        versionName "1.1.15"
+        versionCode 17
+        versionName "1.1.16"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -226,7 +226,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.24"
-    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     
@@ -234,11 +234,11 @@ dependencies {
     implementation 'androidx.core:core-splashscreen:1.0.1'
     
     // Play Services Auth for Native Google Sign-in
-    implementation 'com.google.android.gms:play-services-auth:21.0.0'
+    implementation 'com.google.android.gms:play-services-auth:21.2.0'
     
     // Firebase Auth native SDK
-    implementation 'com.google.firebase:firebase-auth:22.3.1'
+    implementation 'com.google.firebase:firebase-auth:23.0.0'
     
     // Firebase Cloud Messaging for push notifications
-    implementation 'com.google.firebase:firebase-messaging:23.4.1'
+    implementation 'com.google.firebase:firebase-messaging:24.0.0'
 }

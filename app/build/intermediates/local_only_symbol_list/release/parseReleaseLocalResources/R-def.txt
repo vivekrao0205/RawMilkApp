@@ -44,4 +44,5 @@ style Theme.App.Starting
 style Theme.RawMilk
 style Theme.RawMilk.Splash
 xml filepaths
+xml network_security_config
 xml shortcuts

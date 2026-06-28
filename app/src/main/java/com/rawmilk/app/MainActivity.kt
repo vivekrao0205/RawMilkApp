@@ -175,12 +175,13 @@ class MainActivity : AppCompatActivity() {
         // Create high-importance notification channel on startup
         createNotificationChannel()
 
-        // Register token refresh broadcast receiver dynamically
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(fcmTokenReceiver, android.content.IntentFilter("com.rawmilk.app.FCM_TOKEN_REFRESH"), RECEIVER_NOT_EXPORTED)
-        } else {
-            registerReceiver(fcmTokenReceiver, android.content.IntentFilter("com.rawmilk.app.FCM_TOKEN_REFRESH"))
-        }
+        // Register token refresh broadcast receiver dynamically and securely
+        androidx.core.content.ContextCompat.registerReceiver(
+            this,
+            fcmTokenReceiver,
+            android.content.IntentFilter("com.rawmilk.app.FCM_TOKEN_REFRESH"),
+            androidx.core.content.ContextCompat.RECEIVER_NOT_EXPORTED
+        )
         FCMDiagnostics.log("MainActivity: fcmTokenReceiver registered.")
     }
 
@@ -216,8 +217,12 @@ class MainActivity : AppCompatActivity() {
         rawUrl?.let { action ->
             if (action.isNotEmpty()) {
                 val launchUrl = if (action.startsWith("http")) action else "https://www.rawmilk.in" + (if (action.startsWith("/")) "" else "/") + action
-                FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
-                webView.loadUrl(launchUrl)
+                if (isValidDomain(launchUrl)) {
+                    FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
+                    webView.loadUrl(launchUrl)
+                } else {
+                    FCMDiagnostics.log("onNewIntent: Blocked invalid redirect launchUrl='$launchUrl'")
+                }
             }
         }
     }
@@ -273,8 +278,9 @@ class MainActivity : AppCompatActivity() {
                 if (action.startsWith("http")) action else "https://www.rawmilk.in" + (if (action.startsWith("/")) "" else "/") + action
             } else null
         } ?: getString(R.string.launchUrl)
-        FCMDiagnostics.log("setupWebViewLayout: Loading URL into WebView: $launchUrl")
-        webView.loadUrl(launchUrl)
+        val validatedUrl = if (isValidDomain(launchUrl)) launchUrl else getString(R.string.launchUrl)
+        FCMDiagnostics.log("setupWebViewLayout: Loading URL into WebView: $validatedUrl")
+        webView.loadUrl(validatedUrl)
     }
 
     private fun clearWebViewFilesOnDisk() {
@@ -315,6 +321,23 @@ class MainActivity : AppCompatActivity() {
         fileOrDirectory.delete()
     }
 
+    private fun isValidDomain(url: String?): Boolean {
+        if (url.isNullOrEmpty()) return false
+        val uri = try {
+            Uri.parse(url)
+        } catch (e: Exception) {
+            return false
+        }
+        val host = uri.host ?: return false
+        val scheme = uri.scheme ?: return false
+        
+        if (scheme != "https") {
+            return false
+        }
+        
+        return (host == "rawmilk.in" || host == "www.rawmilk.in" || host == "raw-milk-1e36d.firebaseapp.com" || host == "raw-milk-1e36d.web.app")
+    }
+
     private fun configureWebViewSettings(wv: WebView) {
         // Enable hardware acceleration for smooth rendering
         wv.setLayerType(View.LAYER_TYPE_HARDWARE, null)
@@ -325,8 +348,16 @@ class MainActivity : AppCompatActivity() {
         settings.databaseEnabled = true
         settings.cacheMode = WebSettings.LOAD_NO_CACHE
         settings.javaScriptCanOpenWindowsAutomatically = true
-        settings.allowFileAccess = true
-        settings.allowContentAccess = true
+        settings.allowFileAccess = false
+        settings.allowContentAccess = false
+        settings.allowFileAccessFromFileURLs = false
+        settings.allowUniversalAccessFromFileURLs = false
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            settings.mixedContentMode = WebSettings.MIXED_CONTENT_NEVER_ALLOW
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            settings.safeBrowsingEnabled = true
+        }
         settings.mediaPlaybackRequiresUserGesture = false
 
         // Optimize viewport and disable zooming to act like a native app shell
@@ -380,20 +411,20 @@ class MainActivity : AppCompatActivity() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 val url = request?.url.toString()
                 
-                // Allow all local paths, subdomains, and redirects under rawmilk.in inside WebView
-                if (url.startsWith("https://www.rawmilk.in") || url.startsWith("https://rawmilk.in") || url.contains("rawmilk.in")) {
+                if (isValidDomain(url)) {
                     return false
                 }
                 
-                // Allow firebaseapp.com (used for Firebase authentication redirects/handlers)
-                if (url.contains("firebaseapp.com")) {
-                    return false
-                }
-                
-                // Launch external links in custom intents
+                // Launch external links in custom intents safely (only http/https schemes)
                 try {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                    startActivity(intent)
+                    val uri = Uri.parse(url)
+                    val scheme = uri.scheme
+                    if (scheme == "http" || scheme == "https") {
+                        val intent = Intent(Intent.ACTION_VIEW, uri)
+                        startActivity(intent)
+                    } else {
+                        Log.w("RawMilkAuth", "Blocked opening of unsafe scheme in intent: $url")
+                    }
                 } catch (e: Exception) {
                     Log.e("RawMilkAuth", "Failed to open external link: $url", e)
                 }
@@ -478,6 +509,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performSilentSignInSync() {
+        val sharedPrefs = getSharedPreferences("RawMilkPrefs", Context.MODE_PRIVATE)
+        val userLoggedOut = sharedPrefs.getBoolean("user_logged_out", false)
+        if (userLoggedOut) {
+            Log.d("RawMilkAuth", "performSilentSignInSync: User explicitly logged out. Skipping silent sign-in sync.")
+            return
+        }
         Log.d("RawMilkAuth", "performSilentSignInSync: Initiating Google silent sign-in...")
         try {
             googleSignInClient?.silentSignIn()?.addOnCompleteListener { task ->
@@ -635,6 +672,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Inner class defining WebView JavaScript API interfaces
+    @androidx.annotation.Keep
     inner class AndroidBridge {
         @JavascriptInterface
         fun launchGoogleSignIn() {
@@ -657,6 +695,12 @@ class MainActivity : AppCompatActivity() {
         @JavascriptInterface
         fun checkNativeAuthSync() {
             Log.d("RawMilkAuth", "checkNativeAuthSync: JS bridge requested auth sync.")
+            val sharedPrefs = getSharedPreferences("RawMilkPrefs", Context.MODE_PRIVATE)
+            val userLoggedOut = sharedPrefs.getBoolean("user_logged_out", false)
+            if (userLoggedOut) {
+                Log.d("RawMilkAuth", "checkNativeAuthSync: User explicitly logged out. Skipping auth sync.")
+                return
+            }
             runOnUiThread {
                 cachedGoogleIdToken?.let { token ->
                     Log.d("RawMilkAuth", "checkNativeAuthSync: Sending cached Google ID token to Web (length: ${token.length}).")
@@ -673,12 +717,45 @@ class MainActivity : AppCompatActivity() {
             Log.d("RawMilkAuth", "logout: JS bridge requested logout.")
             runOnUiThread {
                 try {
+                    // 1. Clear local memory cache
                     cachedGoogleIdToken = null
-                    FirebaseAuth.getInstance().signOut()
-                    googleSignInClient?.signOut()
-                    Log.d("RawMilkAuth", "logout: Successfully logged out natively via JS Bridge request.")
-                    // Inform the WebView immediately to log out on JS side
-                    webView.evaluateJavascript("if (window.onNativeLogout) { window.onNativeLogout(); }", null)
+                    cachedFcmToken = null
+
+                    // 2. Sign out natively
+                    try {
+                        FirebaseAuth.getInstance().signOut()
+                    } catch (authEx: Exception) {
+                        Log.e("RawMilkAuth", "Firebase signOut failed: ${authEx.message}")
+                    }
+                    try {
+                        googleSignInClient?.signOut()
+                    } catch (gsoEx: Exception) {
+                        Log.e("RawMilkAuth", "Google client signOut failed: ${gsoEx.message}")
+                    }
+
+                    // 3. Clear SharedPreferences and set user_logged_out = true
+                    val sharedPrefs = getSharedPreferences("RawMilkPrefs", Context.MODE_PRIVATE)
+                    sharedPrefs.edit().clear().putBoolean("user_logged_out", true).apply()
+
+                    // 4. Clear all cookies
+                    val cookieManager = CookieManager.getInstance()
+                    cookieManager.removeAllCookies(null)
+                    cookieManager.flush()
+
+                    // 5. Clear HTML5 web storage and WebSQL/IndexedDB
+                    WebStorage.getInstance().deleteAllData()
+
+                    // 6. Clear WebView cache and back-forward history
+                    webView.clearCache(true)
+                    webView.clearHistory()
+
+                    // 7. Clear storage on JS side and trigger JS logout
+                    webView.evaluateJavascript("window.localStorage.clear(); window.sessionStorage.clear(); if (window.onNativeLogout) { window.onNativeLogout(); }", null)
+
+                    Log.d("RawMilkAuth", "logout: Successfully cleared all session data. Redirecting to login...")
+
+                    // 8. Redirect web view to login page
+                    webView.loadUrl("https://www.rawmilk.in/login")
                 } catch (e: Exception) {
                     Log.e("RawMilkAuth", "logout: Bridge logout call failed", e)
                 }
@@ -693,6 +770,10 @@ class MainActivity : AppCompatActivity() {
                 val user = firebaseAuth.currentUser
                 FCMDiagnostics.log("initAuthStateListener: Native Firebase Auth state changed. currentUser = ${user?.email}")
                 if (user != null) {
+                    // Reset user_logged_out on successful native authentication
+                    val sharedPrefs = getSharedPreferences("RawMilkPrefs", Context.MODE_PRIVATE)
+                    sharedPrefs.edit().putBoolean("user_logged_out", false).apply()
+
                     user.getIdToken(false).addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             val token = task.result?.token

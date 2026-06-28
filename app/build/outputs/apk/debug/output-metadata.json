@@ -11,11 +11,11 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 14,
-      "versionName": "1.1.13",
+      "versionCode": 17,
+      "versionName": "1.1.16",
       "outputFile": "app-debug.apk"
     }
   ],
   "elementType": "File",
-  "minSdkVersionForDexing": 21
+  "minSdkVersionForDexing": 23
 }

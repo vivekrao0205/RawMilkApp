@@ -31,6 +31,8 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Comparte contido con"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Comparte contido coa aplicación <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Contrae"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Contrasinal"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Clave de acceso"</string>
     <string name="bottomsheet_action_collapse">Contrae o panel inferior</string>
     <string name="bottomsheet_action_expand">Desprega o panel inferior</string>
     <string name="bottomsheet_action_expand_halfway">Despregar ata a metade</string>

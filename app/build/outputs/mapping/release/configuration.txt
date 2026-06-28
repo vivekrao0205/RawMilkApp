@@ -1,6 +1,8 @@
 # The proguard configuration file for the following section is C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
 -keep class androidx.core.content.FileProvider { <init>(); }
+-keep class androidx.credentials.playservices.CredentialProviderMetadataHolder { <init>(); }
+-keep class androidx.credentials.playservices.HiddenActivity { <init>(); }
 -keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
 -keep class androidx.startup.InitializationProvider { <init>(); }
 -keep class com.google.android.datatransport.runtime.backends.TransportBackendDiscovery { <init>(); }
@@ -278,7 +280,7 @@
 }
 
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\e8b07ce9904b24b18349473f41ff4c48\transformed\appcompat-1.7.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\2fa76d099281f0b2d44d9bf28666db83\transformed\firebase-auth-22.3.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\proguard.txt
 -dontwarn com.google.appengine.api.**
 -dontwarn okio.**
 -dontwarn org.apache.**
@@ -303,11 +305,17 @@
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
--keepclassmembers class * extends com.google.android.gms.internal.firebase-auth-api.zzaja {
+-keepclassmembers class * extends com.google.android.gms.internal.firebase-auth-api.zzaje {
   <fields>;
 }
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\2fa76d099281f0b2d44d9bf28666db83\transformed\firebase-auth-22.3.1\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\proguard.txt
+-if class androidx.credentials.CredentialManager
+-keep class androidx.credentials.playservices.** {
+  *;
+}
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\35418b9ca201f6e5dd1031883f1ef515\transformed\play-services-auth-base-18.0.10\proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
@@ -317,13 +325,13 @@
 }
 
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\35418b9ca201f6e5dd1031883f1ef515\transformed\play-services-auth-base-18.0.10\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\82f2a340c0328ccda3f2b05d620ab404\transformed\play-services-fido-20.0.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b240dab1a4b64b4d561ca3c3ec53e864\transformed\play-services-fido-20.1.0\proguard.txt
 # Methods enable and disable in this class are complained as unresolved
 # references, but they are system APIs and are not used by Fido client apps.
 -dontwarn android.nfc.NfcAdapter
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\82f2a340c0328ccda3f2b05d620ab404\transformed\play-services-fido-20.0.1\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\e5a7fc5a22ec432a0ffa79cb168842e8\transformed\play-services-base-18.0.1\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b240dab1a4b64b4d561ca3c3ec53e864\transformed\play-services-fido-20.1.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\proguard.txt
 # b/35135904 Ensure that proguard will not strip the mResultGuardian.
 -keepclassmembers class com.google.android.gms.common.api.internal.BasePendingResult {
   com.google.android.gms.common.api.internal.BasePendingResult$ReleasableResultGuardian mResultGuardian;
@@ -331,7 +339,7 @@
 
 
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\e5a7fc5a22ec432a0ffa79cb168842e8\transformed\play-services-base-18.0.1\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\80264b20dabceb58624defc243e35578\transformed\recaptcha-18.4.0\proguard.txt
 # Proguard cannot process META-INF/versions/9.
 # See https://discuss.gradle.org/t/meta-inf-version-duplicate-error-when-using-proguard/31380
@@ -369,12 +377,12 @@
 -dontwarn com.google.auto.value.AutoValue$Builder
 
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\9ea424b124a12f403411e4065fc1eb42\transformed\firebase-auth-interop-20.0.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\177f12f066354b8f339123829bc0b1b2\transformed\firebase-common-20.4.2\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\proguard.txt
 -dontwarn com.google.firebase.platforminfo.KotlinDetector
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\177f12f066354b8f339123829bc0b1b2\transformed\firebase-common-20.4.2\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5860093ae76be75e0af2a6f2942542f4\transformed\transition-1.5.0\proguard.txt
 # Copyright (C) 2017 The Android Open Source Project
 #
@@ -519,11 +527,11 @@
 # An annotation used for build tooling, won't be directly accessed.
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\10a884b9fbd9a9ad2ba0f5686d54f7bb\transformed\rules\lib\META-INF\com.android.tools\r8\coroutines.pro
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\fe6b33982aff15f1369b1d9bdc0294f7\transformed\play-services-tasks-18.0.2\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\cd8fc6b360aba06615c299fd180a36dc\transformed\play-services-tasks-18.1.0\proguard.txt
 
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\fe6b33982aff15f1369b1d9bdc0294f7\transformed\play-services-tasks-18.0.2\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\2ccddba0afaadb89b7dd0a6faa239af2\transformed\play-services-basement-18.2.0\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\cd8fc6b360aba06615c299fd180a36dc\transformed\play-services-tasks-18.1.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\proguard.txt
 # Needed when building against pre-Marshmallow SDK.
 -dontwarn android.security.NetworkSecurityPolicy
 
@@ -544,6 +552,10 @@
 -dontwarn org.checkerframework.**
 -dontwarn com.google.errorprone.annotations.**
 -dontwarn org.jspecify.nullness.NullMarked
+
+# Annotations no longer exist. Suppression prevents ProGuard failures in
+# SDKs which depend on earlier versions of play-services-basement.
+-dontwarn com.google.android.gms.common.util.VisibleForTesting
 
 # Proguard flags for consumers of the Google Play services SDK
 # https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
@@ -597,7 +609,7 @@
 
 
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\2ccddba0afaadb89b7dd0a6faa239af2\transformed\play-services-basement-18.2.0\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\413ff9a53fe06c2be1bc74b0ef493b74\transformed\fragment-1.5.7\proguard.txt
 # Copyright (C) 2020 The Android Open Source Project
 #
@@ -694,7 +706,7 @@
     public boolean isLayoutSuppressed();
 }
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\58e9f61197b0e5b77facfb87b0423f62\transformed\recyclerview-1.1.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\722dee6ae4ac1edbdb45f9b34cb0b28a\transformed\core-1.13.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\6d928d651ceed2d9285d01a4bd8969c0\transformed\core-1.13.1\proguard.txt
 # Never inline methods, but allow shrinking and obfuscation.
 -keepclassmembernames,allowobfuscation,allowshrinking class androidx.core.view.ViewCompat$Api* {
   <methods>;
@@ -712,28 +724,34 @@
   <methods>;
 }
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\722dee6ae4ac1edbdb45f9b34cb0b28a\transformed\core-1.13.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b7709b81c2391ca525631cd2b7229efa\transformed\firebase-components-17.1.5\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\6d928d651ceed2d9285d01a4bd8969c0\transformed\core-1.13.1\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\251c93e95fd60f32912053357761d794\transformed\googleid-1.1.0\proguard.txt
+# Proguard cannot process META-INF/versions/9.
+# See https://discuss.gradle.org/t/meta-inf-version-duplicate-error-when-using-proguard/31380
+-dontwarn module-info
+
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\251c93e95fd60f32912053357761d794\transformed\googleid-1.1.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\bad9a389d8566b48a1414eb6e33a42cc\transformed\firebase-components-18.0.0\proguard.txt
 -dontwarn com.google.firebase.components.Component$Instantiation
 -dontwarn com.google.firebase.components.Component$ComponentType
 
 -keep class * implements com.google.firebase.components.ComponentRegistrar
 -keep,allowshrinking interface com.google.firebase.components.ComponentRegistrar
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b7709b81c2391ca525631cd2b7229efa\transformed\firebase-components-17.1.5\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\282cfcbdb9efbf48c0d395d69cf9a1ea\transformed\transport-backend-cct-3.1.8\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\bad9a389d8566b48a1414eb6e33a42cc\transformed\firebase-components-18.0.0\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\282cfcbdb9efbf48c0d395d69cf9a1ea\transformed\transport-backend-cct-3.1.8\proguard.txt
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\proguard.txt
+# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\8141cb4f75bbd8ccc8ecebd1d9d896e7\transformed\firebase-encoders-json-18.0.0\proguard.txt
+
+# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\8141cb4f75bbd8ccc8ecebd1d9d896e7\transformed\firebase-encoders-json-18.0.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5c01f3cf87ce73b6e40234c6c0b8f221\transformed\transport-api-3.1.0\proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
 # End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5c01f3cf87ce73b6e40234c6c0b8f221\transformed\transport-api-3.1.0\proguard.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\8141cb4f75bbd8ccc8ecebd1d9d896e7\transformed\firebase-encoders-json-18.0.0\proguard.txt
-
-# End of content from C:\Users\Vivek\.gradle\caches\8.11.1\transforms\8141cb4f75bbd8ccc8ecebd1d9d896e7\transformed\firebase-encoders-json-18.0.0\proguard.txt
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\34df205433510f7ca04a08ce4f04799b\transformed\versionedparcelable-1.1.1\proguard.txt
 -keep class * implements androidx.versionedparcelable.VersionedParcelable
 -keep public class android.support.**Parcelizer { *; }
