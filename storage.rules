@@ -1,0 +1,28 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Match files uploaded under users/userId
+    match /users/{userId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      
+      // Allow write access only to the resource owner
+      // Restrict file size to < 5MB to prevent DoS/overflows
+      // Whitelist only safe image types (jpeg, png, webp)
+      // Strictly block SVG and HTML files to prevent cross-site scripting (XSS) via file serving
+      allow write: if isOwner(userId)
+        && request.resource.size < 5 * 1024 * 1024
+        && (request.resource.contentType == 'image/jpeg' 
+            || request.resource.contentType == 'image/png' 
+            || request.resource.contentType == 'image/webp');
+    }
+  }
+}

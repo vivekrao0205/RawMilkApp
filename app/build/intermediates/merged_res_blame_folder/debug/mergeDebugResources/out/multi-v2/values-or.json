@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeDebugResources-38:/values-or/values-or.xml",
+            "outputFile": "com.rawmilk.app-mergeDebugResources-39:/values-or/values-or.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-or\\values-or.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,165,270,383",
-                        "endColumns": "109,104,112,108",
-                        "endOffsets": "160,265,378,487"
-                    },
-                    "to": {
-                        "startLines": "68,72,73,74",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "6998,7322,7427,7540",
-                        "endColumns": "109,104,112,108",
-                        "endOffsets": "7103,7422,7535,7644"
-                    }
-                },
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-or\\values-or.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "3074,3186",
                         "endColumns": "111,111",
                         "endOffsets": "3181,3293"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,165,270,383",
+                        "endColumns": "109,104,112,108",
+                        "endOffsets": "160,265,378,487"
+                    },
+                    "to": {
+                        "startLines": "68,72,73,74",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6998,7322,7427,7540",
+                        "endColumns": "109,104,112,108",
+                        "endOffsets": "7103,7422,7535,7644"
                     }
                 },
                 {

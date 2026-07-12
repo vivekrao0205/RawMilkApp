@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeReleaseResources-38:/values-nl/values-nl.xml",
+            "outputFile": "com.rawmilk.app-mergeReleaseResources-39:/values-nl/values-nl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-nl\\values-nl.xml",
@@ -35,6 +35,23 @@
                         "startOffsets": "3714,3816,3918,4018,4118,4225,4329,12867",
                         "endColumns": "101,101,99,99,106,103,118,100",
                         "endOffsets": "3811,3913,4013,4113,4220,4324,4443,12963"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-nl\\values-nl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,158,259,370",
+                        "endColumns": "102,100,110,98",
+                        "endOffsets": "153,254,365,464"
+                    },
+                    "to": {
+                        "startLines": "68,72,73,74",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7046,7362,7463,7574",
+                        "endColumns": "102,100,110,98",
+                        "endOffsets": "7144,7458,7569,7668"
                     }
                 },
                 {
@@ -88,23 +105,6 @@
                         "startOffsets": "4748,4856,5007,5135,5246,5413,5540,5663,5912,6090,6196,6365,6491,6654,6836,6904,6967",
                         "endColumns": "107,150,127,110,166,126,122,105,177,105,168,125,162,181,67,62,78",
                         "endOffsets": "4851,5002,5130,5241,5408,5535,5658,5764,6085,6191,6360,6486,6649,6831,6899,6962,7041"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-nl\\values-nl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,158,259,370",
-                        "endColumns": "102,100,110,98",
-                        "endOffsets": "153,254,365,464"
-                    },
-                    "to": {
-                        "startLines": "68,72,73,74",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7046,7362,7463,7574",
-                        "endColumns": "102,100,110,98",
-                        "endOffsets": "7144,7458,7569,7668"
                     }
                 },
                 {

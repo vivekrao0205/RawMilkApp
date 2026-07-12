@@ -54,14 +54,14 @@ def twaManifest = [
 ]
 
 android {
-    compileSdkVersion 36
+    compileSdkVersion 35
     namespace "com.rawmilk.app"
     defaultConfig {
         applicationId "com.rawmilk.app"
         minSdkVersion 23
         targetSdkVersion 35
-        versionCode 17
-        versionName "1.1.16"
+        versionCode 18
+        versionName "1.1.17"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -224,6 +224,14 @@ repositories {
     
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.browser:browser:1.8.0'
+        force 'androidx.core:core:1.13.1'
+        force 'androidx.core:core-ktx:1.13.1'
+    }
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.24"
     implementation 'androidx.core:core-ktx:1.13.1'
@@ -241,4 +249,8 @@ dependencies {
     
     // Firebase Cloud Messaging for push notifications
     implementation 'com.google.firebase:firebase-messaging:24.0.0'
+
+    // Android Browser Helper & Custom Tabs for TWA Compliance
+    implementation 'androidx.browser:browser:1.8.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
 }

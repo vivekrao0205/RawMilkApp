@@ -30,6 +30,9 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.FirebaseOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
+import java.net.URI
+import java.net.URL
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
@@ -210,19 +213,24 @@ class MainActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         setIntent(intent)
-        val rawUrl = intent?.getStringExtra("target_url") 
+        val rawUrl = intent?.dataString
+            ?: intent?.getStringExtra("target_url") 
             ?: intent?.getStringExtra("click_action") 
             ?: intent?.getStringExtra("url")
         FCMDiagnostics.log("onNewIntent: Intercepted rawUrl='$rawUrl'")
-        rawUrl?.let { action ->
-            if (action.isNotEmpty()) {
-                val launchUrl = if (action.startsWith("http")) action else "https://www.rawmilk.in" + (if (action.startsWith("/")) "" else "/") + action
-                if (isValidDomain(launchUrl)) {
-                    FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
-                    webView.loadUrl(launchUrl)
-                } else {
-                    FCMDiagnostics.log("onNewIntent: Blocked invalid redirect launchUrl='$launchUrl'")
-                }
+        if (!rawUrl.isNullOrEmpty()) {
+            val launchUrl = if (rawUrl.startsWith("https://")) {
+                rawUrl
+            } else if (rawUrl.startsWith("http://")) {
+                "https://" + rawUrl.substring(7)
+            } else {
+                "https://www.rawmilk.in" + (if (rawUrl.startsWith("/")) "" else "/") + rawUrl
+            }
+            if (isValidDomain(launchUrl)) {
+                FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
+                webView.loadUrl(launchUrl)
+            } else {
+                FCMDiagnostics.log("onNewIntent: Blocked invalid redirect launchUrl='$launchUrl'")
             }
         }
     }
@@ -268,16 +276,23 @@ class MainActivity : AppCompatActivity() {
             Log.e("RawMilkNative", "Failed to clear WebView Cache/History:", e)
         }
 
-        // Read launchUrl injected via Gradle resources R.string.launchUrl, or target_url/click_action/url from intent
-        val rawUrl = intent?.getStringExtra("target_url") 
+        // Read launchUrl from intent data (deep link) or extras
+        val rawUrl = intent?.dataString
+            ?: intent?.getStringExtra("target_url") 
             ?: intent?.getStringExtra("click_action") 
             ?: intent?.getStringExtra("url")
         FCMDiagnostics.log("setupWebViewLayout: Intercepted launch rawUrl='$rawUrl'")
-        val launchUrl = rawUrl?.let { action ->
-            if (action.isNotEmpty()) {
-                if (action.startsWith("http")) action else "https://www.rawmilk.in" + (if (action.startsWith("/")) "" else "/") + action
-            } else null
-        } ?: getString(R.string.launchUrl)
+        val launchUrl = if (!rawUrl.isNullOrEmpty()) {
+            if (rawUrl.startsWith("https://")) {
+                rawUrl
+            } else if (rawUrl.startsWith("http://")) {
+                "https://" + rawUrl.substring(7)
+            } else {
+                "https://www.rawmilk.in" + (if (rawUrl.startsWith("/")) "" else "/") + rawUrl
+            }
+        } else {
+            getString(R.string.launchUrl)
+        }
         val validatedUrl = if (isValidDomain(launchUrl)) launchUrl else getString(R.string.launchUrl)
         FCMDiagnostics.log("setupWebViewLayout: Loading URL into WebView: $validatedUrl")
         webView.loadUrl(validatedUrl)
@@ -323,24 +338,44 @@ class MainActivity : AppCompatActivity() {
 
     private fun isValidDomain(url: String?): Boolean {
         if (url.isNullOrEmpty()) return false
-        val uri = try {
-            Uri.parse(url)
+        // Block backslashes in URL to prevent WebView parser differential attacks
+        if (url.contains("\\")) {
+            return false
+        }
+        return try {
+            val javaUri = java.net.URI(url)
+            val scheme = javaUri.scheme ?: return false
+            if (scheme != "https") return false
+            val host = javaUri.host ?: return false
+            
+            // Block userinfo to prevent authority spoofing (e.g., https://rawmilk.in@attacker.com)
+            if (javaUri.userInfo != null) {
+                return false
+            }
+
+            // Cross-verify with java.net.URL
+            val javaUrl = java.net.URL(url)
+            val urlHost = javaUrl.host ?: return false
+            
+            if (host != urlHost) {
+                return false // Parser differential detected
+            }
+            
+            (host == "rawmilk.in" || host == "www.rawmilk.in" || host == "raw-milk-1e36d.firebaseapp.com" || host == "raw-milk-1e36d.web.app")
         } catch (e: Exception) {
-            return false
+            false
         }
-        val host = uri.host ?: return false
-        val scheme = uri.scheme ?: return false
-        
-        if (scheme != "https") {
-            return false
-        }
-        
-        return (host == "rawmilk.in" || host == "www.rawmilk.in" || host == "raw-milk-1e36d.firebaseapp.com" || host == "raw-milk-1e36d.web.app")
     }
 
     private fun configureWebViewSettings(wv: WebView) {
         // Enable hardware acceleration for smooth rendering
         wv.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+
+        // Disable WebView debugging in production. Enable only in debug builds.
+        val isDebuggable = (applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(isDebuggable)
+        }
 
         val settings = wv.settings
         settings.javaScriptEnabled = true
@@ -563,20 +598,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendGoogleTokenToWeb(token: String) {
+        val escapedToken = JSONObject.quote(token)
         webView.post {
-            webView.evaluateJavascript("window.onGoogleSignInSuccess('$token')", null)
+            webView.evaluateJavascript("window.onGoogleSignInSuccess($escapedToken)", null)
         }
         webView.postDelayed({
-            webView.evaluateJavascript("window.onGoogleSignInSuccess('$token')", null)
+            webView.evaluateJavascript("window.onGoogleSignInSuccess($escapedToken)", null)
         }, 500)
     }
 
     private fun sendGoogleSignInFailureToWeb(error: String) {
+        val escapedError = JSONObject.quote(error)
         webView.post {
-            webView.evaluateJavascript("window.onGoogleSignInFailure('$error')", null)
+            webView.evaluateJavascript("window.onGoogleSignInFailure($escapedError)", null)
         }
         webView.postDelayed({
-            webView.evaluateJavascript("window.onGoogleSignInFailure('$error')", null)
+            webView.evaluateJavascript("window.onGoogleSignInFailure($escapedError)", null)
         }, 500)
     }
 
@@ -621,8 +658,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun syncFcmTokenWithWeb(token: String) {
         FCMDiagnostics.log("syncFcmTokenWithWeb: Pushing token to Javascript environment...")
+        val escapedToken = JSONObject.quote(token)
         webView.post {
-            webView.evaluateJavascript("javascript:window.onFcmTokenReceived('$token')", null)
+            webView.evaluateJavascript("window.onFcmTokenReceived($escapedToken)", null)
         }
     }
 

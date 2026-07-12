@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeDebugResources-38:/values-v28/values-v28.xml",
+            "outputFile": "com.rawmilk.app-mergeDebugResources-39:/values-v28/values-v28.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\3aff476984a43f057a8ed379b09e2fb3\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",

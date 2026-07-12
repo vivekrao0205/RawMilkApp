@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeReleaseResources-38:/values-th/values-th.xml",
+            "outputFile": "com.rawmilk.app-mergeReleaseResources-39:/values-th/values-th.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-th\\values-th.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2964,3076",
                         "endColumns": "111,113",
                         "endOffsets": "3071,3185"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-th\\values-th.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,158,257,368",
-                        "endColumns": "102,98,110,97",
-                        "endOffsets": "153,252,363,461"
-                    },
-                    "to": {
-                        "startLines": "68,72,73,74",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "6720,7051,7150,7261",
-                        "endColumns": "102,98,110,97",
-                        "endOffsets": "6818,7145,7256,7354"
                     }
                 },
                 {
@@ -122,6 +105,23 @@
                         "startOffsets": "3589,3685,3788,3886,3984,4087,4192,12405",
                         "endColumns": "95,102,97,97,102,104,111,100",
                         "endOffsets": "3680,3783,3881,3979,4082,4187,4299,12501"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-th\\values-th.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,158,257,368",
+                        "endColumns": "102,98,110,97",
+                        "endOffsets": "153,252,363,461"
+                    },
+                    "to": {
+                        "startLines": "68,72,73,74",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6720,7051,7150,7261",
+                        "endColumns": "102,98,110,97",
+                        "endOffsets": "6818,7145,7256,7354"
                     }
                 }
             ]

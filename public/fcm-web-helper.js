@@ -53,6 +53,11 @@ function initializeRawMilkPush(options = {}) {
     // 1. Hook the global Android token callback.
     // The Android app calls this method programmatically via evaluateJavascript.
     window.onFcmTokenReceived = function(token) {
+      // Validate token structure strictly to prevent injection/XSS attacks
+      if (typeof token !== 'string' || !/^[a-zA-Z0-9_\-:]+$/.test(token)) {
+        console.error('[RawMilkWebFCM] Blocked malformed FCM token.');
+        return;
+      }
       fcmLog('Successfully received Native FCM Token from AndroidBridge:', token.substring(0, 10) + '...');
       
       // Save it in localStorage for fast local reads

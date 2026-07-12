@@ -53,11 +53,14 @@ self.addEventListener('fetch', (event) => {
 
   // 1. BYPASS Caching entirely for:
   // - Non-GET requests (e.g. POST, PUT, DELETE)
+  // - Non-HTTP/HTTPS protocols (e.g., data:, javascript:, chrome-extension:)
   // - API routes (/api/*)
   // - Auth redirects and handlers (/__/auth/*, firebaseapp.com)
   // - Firestore connections and Firebase Auth operations
+  const isHttp = url.protocol === 'https:' || url.protocol === 'http:';
   const isExcluded = 
     event.request.method !== 'GET' ||
+    !isHttp ||
     url.origin !== self.location.origin ||
     url.pathname.startsWith('/api/') ||
     url.pathname.startsWith('/__/auth/') ||

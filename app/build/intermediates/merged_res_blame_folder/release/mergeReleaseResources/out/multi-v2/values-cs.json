@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeReleaseResources-38:/values-cs/values-cs.xml",
+            "outputFile": "com.rawmilk.app-mergeReleaseResources-39:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-cs\\values-cs.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "3112,3221",
                         "endColumns": "108,121",
                         "endOffsets": "3216,3338"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-cs\\values-cs.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,157,260,374",
-                        "endColumns": "101,102,113,100",
-                        "endOffsets": "152,255,369,470"
-                    },
-                    "to": {
-                        "startLines": "70,74,75,76",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "7053,7380,7483,7597",
-                        "endColumns": "101,102,113,100",
-                        "endOffsets": "7150,7478,7592,7693"
                     }
                 },
                 {
@@ -122,6 +105,23 @@
                         "startOffsets": "3771,3869,3971,4072,4171,4276,4383,12838",
                         "endColumns": "97,101,100,98,104,106,118,100",
                         "endOffsets": "3864,3966,4067,4166,4271,4378,4497,12934"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-cs\\values-cs.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,157,260,374",
+                        "endColumns": "101,102,113,100",
+                        "endOffsets": "152,255,369,470"
+                    },
+                    "to": {
+                        "startLines": "70,74,75,76",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "7053,7380,7483,7597",
+                        "endColumns": "101,102,113,100",
+                        "endOffsets": "7150,7478,7592,7693"
                     }
                 }
             ]

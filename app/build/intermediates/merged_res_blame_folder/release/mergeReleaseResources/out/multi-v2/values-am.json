@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeReleaseResources-38:/values-am/values-am.xml",
+            "outputFile": "com.rawmilk.app-mergeReleaseResources-39:/values-am/values-am.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-am\\values-am.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2929,3040",
                         "endColumns": "110,114",
                         "endOffsets": "3035,3150"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-am\\values-am.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,151,246,352",
-                        "endColumns": "95,94,105,96",
-                        "endOffsets": "146,241,347,444"
-                    },
-                    "to": {
-                        "startLines": "68,72,73,74",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "6493,6797,6892,6998",
-                        "endColumns": "95,94,105,96",
-                        "endOffsets": "6584,6887,6993,7090"
                     }
                 },
                 {
@@ -122,6 +105,23 @@
                         "startOffsets": "3532,3625,3725,3822,3921,4017,4119,11921",
                         "endColumns": "92,99,96,98,95,101,99,100",
                         "endOffsets": "3620,3720,3817,3916,4012,4114,4214,12017"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-am\\values-am.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,151,246,352",
+                        "endColumns": "95,94,105,96",
+                        "endOffsets": "146,241,347,444"
+                    },
+                    "to": {
+                        "startLines": "68,72,73,74",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6493,6797,6892,6998",
+                        "endColumns": "95,94,105,96",
+                        "endOffsets": "6584,6887,6993,7090"
                     }
                 }
             ]

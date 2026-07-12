@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions for secure authentication checks
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Helper to validate string fields do not contain script injection vectors (Stored XSS mitigation)
+    function isSafeString(val) {
+      return val is string 
+        && !val.matches('.*<script.*') 
+        && !val.matches('.*javascript:.*')
+        && !val.matches('.*<.*>');
+    }
+
+    // Match users collection - users can only access their own profile
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+      allow create: if isAuthenticated() 
+        && request.resource.data.email == request.auth.token.email
+        && isSafeString(request.resource.data.name);
+    }
+
+    // Match carts collection - users can only mutate their own cart items
+    match /carts/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Match orders collection - users can only create/read their own orders
+    match /orders/{orderId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || request.auth.token.admin == true);
+      allow create: if isAuthenticated() 
+        && request.resource.data.userId == request.auth.uid
+        && isSafeString(request.resource.data.address)
+        && isSafeString(request.resource.data.comments);
+      allow update, delete: if isAuthenticated() && request.auth.token.admin == true;
+    }
+
+    // Match products collection - public read access, write restricted to administrators
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.admin == true;
+    }
+  }
+}

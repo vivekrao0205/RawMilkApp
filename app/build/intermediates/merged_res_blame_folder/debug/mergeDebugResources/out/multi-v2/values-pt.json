@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.rawmilk.app-mergeDebugResources-38:/values-pt/values-pt.xml",
+            "outputFile": "com.rawmilk.app-mergeDebugResources-39:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\fbc722cdd877ff7f296c259c36803baf\\transformed\\credentials-1.2.0-rc01\\res\\values-pt\\values-pt.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "2843,2952",
                         "endColumns": "108,121",
                         "endOffsets": "2947,3069"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\af236169434fbd9f84e42087148a325d\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,170,269,381",
-                        "endColumns": "114,98,111,105",
-                        "endOffsets": "165,264,376,482"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,41",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "3809,3924,4023,4135",
-                        "endColumns": "114,98,111,105",
-                        "endOffsets": "3919,4018,4130,4236"
                     }
                 },
                 {
@@ -69,6 +52,23 @@
                         "startOffsets": "3074,3171,3273,3372,3472,3579,3689,4327",
                         "endColumns": "96,101,98,99,106,109,119,100",
                         "endOffsets": "3166,3268,3367,3467,3574,3684,3804,4423"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Vivek\\.gradle\\caches\\8.11.1\\transforms\\0deb2690faad561e6709611858642ab8\\transformed\\browser-1.8.0\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,170,269,381",
+                        "endColumns": "114,98,111,105",
+                        "endOffsets": "165,264,376,482"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3809,3924,4023,4135",
+                        "endColumns": "114,98,111,105",
+                        "endOffsets": "3919,4018,4130,4236"
                     }
                 }
             ]

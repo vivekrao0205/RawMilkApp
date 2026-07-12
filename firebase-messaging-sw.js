@@ -52,6 +52,25 @@ messaging.onBackgroundMessage((payload) => {
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
 
+// Helper to check if URL belongs to approved domain list and uses HTTPS
+const isApprovedDomain = (urlStr) => {
+  try {
+    const url = new URL(urlStr);
+    if (url.protocol !== 'https:') {
+      return false;
+    }
+    const approvedHosts = [
+      'rawmilk.in',
+      'www.rawmilk.in',
+      'raw-milk-1e36d.firebaseapp.com',
+      'raw-milk-1e36d.web.app'
+    ];
+    return approvedHosts.includes(url.hostname);
+  } catch (e) {
+    return false;
+  }
+};
+
 // Helper function to compare routes safely (ignores query params/trailing slashes)
 const isUrlEquivalent = (url1, url2) => {
   try {
@@ -78,9 +97,17 @@ self.addEventListener('notificationclick', (event) => {
   let targetUrl = clickAction;
   if (!targetUrl.startsWith('http://') && !targetUrl.startsWith('https://')) {
     targetUrl = new URL(clickAction, self.location.origin).href;
+  } else if (targetUrl.startsWith('http://')) {
+    targetUrl = 'https://' + targetUrl.substring(7);
   }
 
   console.log('[RawMilkFCM] Resolved redirection URL:', targetUrl);
+
+  // Validate the resolved target URL strictly against approved domains
+  if (!isApprovedDomain(targetUrl)) {
+    console.warn('[RawMilkFCM] Blocked redirect to unapproved domain:', targetUrl);
+    targetUrl = self.location.origin + '/';
+  }
 
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
