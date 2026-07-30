@@ -113,7 +113,7 @@
 
 
 # End of content from C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
-# The proguard configuration file for the following section is C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\default_proguard_files\global\proguard-android.txt-8.6.0
+# The proguard configuration file for the following section is C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.6.0
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 #
@@ -121,15 +121,9 @@
 # the plugin and unpacked at build-time. The files in $ANDROID_HOME are no longer maintained and
 # will be ignored by new version of the Android plugin for Gradle.
 
-# Optimization is turned off by default. Dex does not like code run
-# through the ProGuard optimize steps (and performs some
-# of these optimizations on its own).
-# Note that if you want to enable optimization, you cannot just
-# include optimization flags in your own project configuration file;
-# instead you will need to point to the
-# "proguard-android-optimize.txt" file instead of this one from your
-# project.properties file.
--dontoptimize
+# Optimizations: If you don't want to optimize, use the proguard-android.txt configuration file
+# instead of this one, which turns off the optimization flags.
+-allowaccessmodification
 
 # Preserve some attributes that may be required for reflection.
 -keepattributes AnnotationDefault,
@@ -210,7 +204,27 @@
 # These classes are duplicated between android.jar and core-lambda-stubs.jar.
 -dontnote java.lang.invoke.**
 
-# End of content from C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\default_proguard_files\global\proguard-android.txt-8.6.0
+# End of content from C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.6.0
+# The proguard configuration file for the following section is C:\Users\Vivek\Downloads\RawMilkTWA\app\proguard-rules.pro
+# R8 / ProGuard optimization rules for RawMilk Android Release builds
+
+# Strip debug logging statements in production release builds to reduce bytecode size and improve execution speed
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}
+
+# Preserve Android Browser Helper TWA and Custom Tabs classes
+-keep class com.google.androidbrowserhelper.** { *; }
+-keep class androidx.browser.customtabs.** { *; }
+
+# Preserve Firebase Auth, FCM, and Google Play Services entry points
+-keep class com.google.firebase.** { *; }
+-keep class com.google.android.gms.** { *; }
+-keep class com.rawmilk.app.** { *; }
+
+# End of content from C:\Users\Vivek\Downloads\RawMilkTWA\app\proguard-rules.pro
 # The proguard configuration file for the following section is C:\Users\Vivek\.gradle\caches\8.11.1\transforms\3aff476984a43f057a8ed379b09e2fb3\transformed\material-1.12.0\proguard.txt
 # Copyright (C) 2015 The Android Open Source Project
 #

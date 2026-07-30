@@ -10,7 +10,7 @@
     <color name="navigationDividerColor">#000000</color>
     <color name="navigationDividerColorDark">#000000</color>
     <color name="shortcut_background">#F5F5F5</color>
-    <integer name="splashScreenFadeOutDuration">300</integer>
+    <integer name="splashScreenFadeOutDuration">0</integer>
     <string name="appName" translatable="false">RawMilk</string>
     <string name="assetStatements" translatable="false">[{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://rawmilk.in\"}},{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://www.rawmilk.in\"}}]</string>
     <string name="default_web_client_id" translatable="false">294465354146-m5f5dn7ubk3m2n1fhr6ih1ie53em041f.apps.googleusercontent.com</string>

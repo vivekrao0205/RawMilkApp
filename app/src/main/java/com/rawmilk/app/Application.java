@@ -23,13 +23,15 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
+import java.util.concurrent.Executors;
 
 public class Application extends android.app.Application {
 
   @Override
   public void onCreate() {
       super.onCreate();
-      createNotificationChannel();
+      // Offload notification channel setup to background thread for instant app cold start
+      Executors.newSingleThreadExecutor().execute(this::createNotificationChannel);
   }
 
   private void createNotificationChannel() {

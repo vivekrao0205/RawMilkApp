@@ -22,7 +22,7 @@
     <!-- Value from default config. -->
     <color name="navigationDividerColorDark">#000000</color>
     <!-- Value from default config. -->
-    <integer name="splashScreenFadeOutDuration">300</integer>
+    <integer name="splashScreenFadeOutDuration">0</integer>
     <!-- Value from default config. -->
     <string name="appName" translatable="false">RawMilk</string>
     <!-- Value from default config. -->

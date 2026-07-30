@@ -15,7 +15,7 @@
   "startUrl": "/",
   "iconUrl": "https://www.rawmilk.in/icon-512x512.png",
   "maskableIconUrl": "https://www.rawmilk.in/icon-512x512.png",
-  "splashScreenFadeOutDuration": 300,
+  "splashScreenFadeOutDuration": 0,
   "signingKey": {
     "path": "C:\\Users\\Vivek\\Downloads\\RawMilkTWA\\android.keystore",
     "alias": "android"

@@ -39,6 +39,7 @@ com.rawmilk.app-res-37 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\generated\r
 com.rawmilk.app-resValues-38 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\generated\res\resValues\release
 com.rawmilk.app-packageReleaseResources-39 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
 com.rawmilk.app-packageReleaseResources-40 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
-com.rawmilk.app-release-41 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\merged_res\release\mergeReleaseResources
-com.rawmilk.app-main-42 C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\res
-com.rawmilk.app-release-43 C:\Users\Vivek\Downloads\RawMilkTWA\app\src\release\res
+com.rawmilk.app-merged-not-compiled-resources-41 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\merged-not-compiled-resources\release
+com.rawmilk.app-release-42 C:\Users\Vivek\Downloads\RawMilkTWA\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.rawmilk.app-main-43 C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\res
+com.rawmilk.app-release-44 C:\Users\Vivek\Downloads\RawMilkTWA\app\src\release\res
