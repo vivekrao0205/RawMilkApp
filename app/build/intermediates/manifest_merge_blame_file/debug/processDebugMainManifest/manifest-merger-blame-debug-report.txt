@@ -1,45 +1,45 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<!--
 3    Copyright 2019 Google Inc. All Rights Reserved.
-4    Modified for Raw Milk Native Android WebView App.
+4    Trusted Web Activity (TWA) Configuration for Raw Milk.
 5-->
 6<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 7    package="com.rawmilk.app"
-8    android:versionCode="17"
-9    android:versionName="1.1.16" >
+8    android:versionCode="22"
+9    android:versionName="1.1.17" >
 10
 11    <uses-sdk
 12        android:minSdkVersion="23"
-13        android:targetSdkVersion="35" />
+13        android:targetSdkVersion="36" />
 14
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:9:5-67
-15-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:9:22-64
+15-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:8:5-67
+15-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:8:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:10:5-79
-16-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:10:22-76
+16-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:9:5-79
+16-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:9:22-76
 17    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-17-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:11:5-77
-17-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:11:22-74
+17-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:10:5-77
+17-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:10:22-74
 18    <uses-permission android:name="android.permission.WAKE_LOCK" />
-18-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:12:5-68
-18-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:12:22-65
+18-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:11:5-68
+18-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:11:22-65
 19
 20    <queries>
 20-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\cb7a721a1314a01ac394fd4a2b8606d4\transformed\androidbrowserhelper-2.5.0\AndroidManifest.xml:26:5-34:15
 21        <intent>
 21-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\cb7a721a1314a01ac394fd4a2b8606d4\transformed\androidbrowserhelper-2.5.0\AndroidManifest.xml:27:9-33:18
 22            <action android:name="android.intent.action.VIEW" />
-22-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:17-69
-22-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:25-66
+22-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:17-69
+22-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:25-66
 23
 24            <category android:name="android.intent.category.BROWSABLE" />
-24-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:17-78
-24-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:27-75
+24-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:17-78
+24-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:27-75
 25
 26            <data android:scheme="https" />
-26-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:17-57:55
-26-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:23-45
+26-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:108:17-110:55
+26-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:109:21-43
 27        </intent>
 28    </queries> <!-- Required by older versions of Google Play services to create IID tokens -->
 29    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -61,487 +61,583 @@
 36-->[androidx.core:core:1.13.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\6d928d651ceed2d9285d01a4bd8969c0\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 37
 38    <application
-38-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:14:5-80:19
+38-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:13:5-143:19
 39        android:name="com.rawmilk.app.Application"
-39-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:15:9-36
+39-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:14:9-36
 40        android:allowBackup="true"
-40-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:16:9-35
+40-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:15:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 41-->[androidx.core:core:1.13.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\6d928d651ceed2d9285d01a4bd8969c0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 42        android:debuggable="true"
 43        android:extractNativeLibs="false"
 44        android:icon="@mipmap/ic_launcher"
-44-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:17:9-43
+44-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:16:9-43
 45        android:label="@string/appName"
-45-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:18:9-40
+45-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:17:9-40
 46        android:networkSecurityConfig="@xml/network_security_config"
-46-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:21:9-69
+46-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:20:9-69
 47        android:supportsRtl="true"
-47-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:19:9-35
-48        android:theme="@style/Theme.RawMilk" >
-48-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:20:9-45
-49
-50        <!-- Default FCM Configuration Metadata -->
-51        <meta-data
-51-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:24:9-26:65
-52            android:name="com.google.firebase.messaging.default_notification_icon"
-52-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:25:13-83
-53            android:resource="@drawable/ic_notification_icon" />
-53-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:26:13-62
-54        <meta-data
-54-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:27:9-29:53
-55            android:name="com.google.firebase.messaging.default_notification_channel_id"
-55-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:28:13-89
-56            android:value="rawmilk_notifications" />
-56-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:29:13-50
-57        <meta-data
-57-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:31:9-33:58
-58            android:name="asset_statements"
-58-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:32:13-44
-59            android:resource="@string/assetStatements" />
-59-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:33:13-55
-60
-61        <activity
-61-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:35:9-59:20
-62            android:name="com.rawmilk.app.MainActivity"
-62-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:36:13-41
-63            android:alwaysRetainTaskState="true"
-63-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:38:13-49
-64            android:exported="true"
-64-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:41:13-36
-65            android:label="@string/launcherName"
-65-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:39:13-49
-66            android:launchMode="singleTask"
-66-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:40:13-44
-67            android:theme="@style/Theme.RawMilk" >
-67-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:37:13-49
-68            <intent-filter>
-68-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:42:13-45:29
-69                <action android:name="android.intent.action.MAIN" />
-69-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:43:17-69
-69-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:43:25-66
-70
-71                <category android:name="android.intent.category.LAUNCHER" />
-71-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:44:17-77
-71-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:44:27-74
-72            </intent-filter>
-73            <intent-filter>
-73-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:46:13-49:29
-74                <action android:name="OPEN_MAIN_ACTIVITY" />
-74-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:47:17-61
-74-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:47:25-58
-75
-76                <category android:name="android.intent.category.DEFAULT" />
-76-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:17-76
-76-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:27-73
-77            </intent-filter>
-78
-79            <!-- Support deep linking from browser / notification URLs -->
-80            <intent-filter android:autoVerify="true" >
-80-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:52:13-58:29
-80-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:52:28-53
-81                <action android:name="android.intent.action.VIEW" />
-81-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:17-69
-81-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:25-66
-82
-83                <category android:name="android.intent.category.DEFAULT" />
-83-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:17-76
-83-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:27-73
-84                <category android:name="android.intent.category.BROWSABLE" />
-84-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:17-78
-84-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:27-75
-85
-86                <data
-86-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:17-57:55
-87                    android:host="@string/hostName"
-87-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:57:21-52
-88                    android:scheme="https" />
-88-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:23-45
-89            </intent-filter>
-90        </activity>
-91
-92        <!-- Native FCM Service to handle push alerts -->
-93        <service
-93-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:62:9-68:19
-94            android:name="com.rawmilk.app.MyFirebaseMessagingService"
-94-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:63:13-55
-95            android:exported="false" >
-95-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:64:13-37
-96            <intent-filter>
-96-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:65:13-67:29
-97                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-97-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:66:17-78
-97-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:66:25-75
-98            </intent-filter>
-99        </service>
-100
-101        <provider
-101-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:70:9-78:20
-102            android:name="androidx.core.content.FileProvider"
-102-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:71:13-62
-103            android:authorities="@string/providerAuthority"
-103-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:72:13-60
-104            android:exported="false"
-104-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:74:13-37
-105            android:grantUriPermissions="true" >
-105-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:73:13-47
-106            <meta-data
-106-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:75:13-77:53
-107                android:name="android.support.FILE_PROVIDER_PATHS"
-107-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:76:17-67
-108                android:resource="@xml/filepaths" />
-108-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:77:17-50
-109        </provider>
-110
-111        <activity
-111-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:29:9-46:20
-112            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-112-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:30:13-80
-113            android:excludeFromRecents="true"
-113-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:31:13-46
-114            android:exported="true"
-114-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:32:13-36
-115            android:launchMode="singleTask"
-115-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:33:13-44
-116            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-116-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:34:13-72
-117            <intent-filter>
-117-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:35:13-45:29
-118                <action android:name="android.intent.action.VIEW" />
-118-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:17-69
-118-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:25-66
-119
-120                <category android:name="android.intent.category.DEFAULT" />
-120-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:17-76
-120-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:27-73
-121                <category android:name="android.intent.category.BROWSABLE" />
-121-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:17-78
-121-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:27-75
-122
-123                <data
-123-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:17-57:55
-124                    android:host="firebase.auth"
-124-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:57:21-52
-125                    android:path="/"
-126                    android:scheme="genericidp" />
-126-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:23-45
-127            </intent-filter>
-128        </activity>
-129        <activity
-129-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:47:9-64:20
-130            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-130-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:48:13-79
-131            android:excludeFromRecents="true"
-131-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:49:13-46
-132            android:exported="true"
-132-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:50:13-36
-133            android:launchMode="singleTask"
-133-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:51:13-44
-134            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-134-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:52:13-72
+47-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:18:9-35
+48        android:testOnly="true"
+49        android:theme="@style/Theme.RawMilk" >
+49-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:19:9-45
+50
+51        <!-- Default FCM Configuration Metadata -->
+52        <meta-data
+52-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:23:9-25:65
+53            android:name="com.google.firebase.messaging.default_notification_icon"
+53-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:24:13-83
+54            android:resource="@drawable/ic_notification_icon" />
+54-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:25:13-62
+55        <meta-data
+55-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:26:9-28:53
+56            android:name="com.google.firebase.messaging.default_notification_channel_id"
+56-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:27:13-89
+57            android:value="rawmilk_notifications" />
+57-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:28:13-50
+58        <meta-data
+58-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:30:9-32:58
+59            android:name="asset_statements"
+59-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:31:13-44
+60            android:resource="@string/assetStatements" />
+60-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:32:13-55
+61
+62        <activity
+62-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:34:9-112:20
+63            android:name="com.rawmilk.app.CustomLauncherActivity"
+63-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:35:13-51
+64            android:alwaysRetainTaskState="true"
+64-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:36:13-49
+65            android:exported="true"
+65-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:40:13-36
+66            android:label="@string/launcherName"
+66-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:37:13-49
+67            android:launchMode="singleTask"
+67-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:38:13-44
+68            android:theme="@style/Theme.RawMilk.NoAnimation" >
+68-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:39:13-61
+69            <meta-data
+69-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:42:13-44:53
+70                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+70-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:43:17-78
+71                android:value="@string/launchUrl" />
+71-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:44:17-50
+72            <meta-data
+72-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:46:13-48:58
+73                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+73-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:47:17-83
+74                android:resource="@color/colorPrimary" />
+74-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:17-55
+75            <meta-data
+75-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:50:13-52:62
+76                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR_DARK"
+76-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:51:17-88
+77                android:resource="@color/colorPrimaryDark" />
+77-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:52:17-59
+78            <meta-data
+78-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:54:13-56:61
+79                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+79-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:17-87
+80                android:resource="@color/navigationColor" />
+80-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:17-58
+81            <meta-data
+81-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:58:13-60:65
+82                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR_DARK"
+82-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:59:17-92
+83                android:resource="@color/navigationColorDark" />
+83-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:60:17-62
+84            <meta-data
+84-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:62:13-64:68
+85                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_DIVIDER_COLOR"
+85-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:63:17-95
+86                android:resource="@color/navigationDividerColor" />
+86-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:64:17-65
+87            <meta-data
+87-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:66:13-68:72
+88                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_DIVIDER_COLOR_DARK"
+88-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:67:17-100
+89                android:resource="@color/navigationDividerColorDark" />
+89-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:68:17-69
+90            <meta-data
+90-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:70:13-72:58
+91                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+91-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:71:17-88
+92                android:resource="@mipmap/ic_launcher" />
+92-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:72:17-55
+93            <meta-data
+93-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:74:13-76:61
+94                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+94-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:75:17-97
+95                android:resource="@color/backgroundColor" />
+95-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:76:17-58
+96            <meta-data
+96-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:78:13-80:72
+97                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+97-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:79:17-98
+98                android:value="@integer/splashScreenFadeOutDuration" />
+98-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:80:17-69
+99            <meta-data
+99-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:82:13-84:61
+100                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+100-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:83:17-90
+101                android:value="@string/providerAuthority" />
+101-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:84:17-58
+102            <meta-data
+102-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:86:13-88:56
+103                android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
+103-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:87:17-84
+104                android:value="@string/fallbackType" />
+104-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:88:17-53
+105            <meta-data
+105-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:90:13-92:55
+106                android:name="android.support.customtabs.trusted.DISPLAY_MODE"
+106-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:91:17-79
+107                android:value="@string/displayMode" />
+107-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:92:17-52
+108            <meta-data
+108-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:94:13-96:55
+109                android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
+109-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:95:17-85
+110                android:value="@string/orientation" />
+110-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:96:17-52
+111
+112            <intent-filter>
+112-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:98:13-101:29
+113                <action android:name="android.intent.action.MAIN" />
+113-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:99:17-69
+113-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:99:25-66
+114
+115                <category android:name="android.intent.category.LAUNCHER" />
+115-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:100:17-77
+115-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:100:27-74
+116            </intent-filter>
+117
+118            <!-- Deep Link Intent Filter for TWA domain -->
+119            <intent-filter android:autoVerify="true" >
+119-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:104:13-111:29
+119-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:104:28-53
+120                <action android:name="android.intent.action.VIEW" />
+120-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:17-69
+120-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:25-66
+121
+122                <category android:name="android.intent.category.DEFAULT" />
+122-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:17-76
+122-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:27-73
+123                <category android:name="android.intent.category.BROWSABLE" />
+123-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:17-78
+123-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:27-75
+124
+125                <data
+125-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:108:17-110:55
+126                    android:host="@string/hostName"
+126-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:110:21-52
+127                    android:scheme="https" />
+127-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:109:21-43
+128            </intent-filter>
+129        </activity>
+130
+131        <service
+131-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:114:9-122:19
+132            android:name="com.google.androidbrowserhelper.trusted.DelegationService"
+132-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:115:13-85
+133            android:enabled="@bool/enableNotification"
+133-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:116:13-55
+134            android:exported="@bool/enableNotification" >
+134-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:117:13-56
 135            <intent-filter>
-135-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:53:13-63:29
-136                <action android:name="android.intent.action.VIEW" />
-136-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:17-69
-136-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:53:25-66
+135-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:118:13-121:29
+136                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE" />
+136-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:119:17-106
+136-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:119:25-103
 137
 138                <category android:name="android.intent.category.DEFAULT" />
-138-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:17-76
-138-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:48:27-73
-139                <category android:name="android.intent.category.BROWSABLE" />
-139-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:17-78
-139-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:55:27-75
-140
-141                <data
-141-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:17-57:55
-142                    android:host="firebase.auth"
-142-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:57:21-52
-143                    android:path="/"
-144                    android:scheme="recaptcha" />
-144-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:56:23-45
-145            </intent-filter>
-146        </activity>
-147
-148        <service
-148-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:66:9-72:19
-149            android:name="com.google.firebase.components.ComponentDiscoveryService"
-149-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:67:13-84
-150            android:directBootAware="true"
-150-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
-151            android:exported="false" >
-151-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:68:13-37
-152            <meta-data
-152-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:69:13-71:85
-153                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-153-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:70:17-109
-154                android:value="com.google.firebase.components.ComponentRegistrar" />
-154-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:71:17-82
-155            <meta-data
-155-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:57:13-59:85
-156                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
-156-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:58:17-122
-157                android:value="com.google.firebase.components.ComponentRegistrar" />
-157-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:59:17-82
-158            <meta-data
-158-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:60:13-62:85
-159                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-159-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:61:17-119
-160                android:value="com.google.firebase.components.ComponentRegistrar" />
-160-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:62:17-82
-161            <meta-data
-161-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
-162                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
-162-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
-163                android:value="com.google.firebase.components.ComponentRegistrar" />
-163-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
-164            <meta-data
-164-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
-165                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-165-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
-166                android:value="com.google.firebase.components.ComponentRegistrar" />
-166-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
-167            <meta-data
-167-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
-168                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-168-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
-169                android:value="com.google.firebase.components.ComponentRegistrar" />
-169-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
-170            <meta-data
-170-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
-171                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-171-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
-172                android:value="com.google.firebase.components.ComponentRegistrar" />
-172-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
-173            <meta-data
-173-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
-174                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-174-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
-175                android:value="com.google.firebase.components.ComponentRegistrar" />
-175-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
-176        </service>
-177
-178        <provider
-178-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-179            android:name="androidx.startup.InitializationProvider"
-179-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-180            android:authorities="com.rawmilk.app.androidx-startup"
-180-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-181            android:exported="false" >
-181-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-182            <meta-data
-182-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-183                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-183-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-184                android:value="androidx.startup" />
-184-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-185            <meta-data
-185-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-186                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-186-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-187                android:value="androidx.startup" />
-187-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-188            <meta-data
-188-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-189                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-189-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-190                android:value="androidx.startup" />
-190-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-191        </provider>
-192
-193        <service
-193-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
-194            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
-194-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
-195            android:enabled="true"
-195-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
-196            android:exported="false" >
-196-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
-197            <meta-data
-197-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
-198                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
-198-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
-199                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
-199-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
-200        </service>
-201
-202        <activity
-202-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
-203            android:name="androidx.credentials.playservices.HiddenActivity"
-203-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
-204            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-204-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
-205            android:enabled="true"
-205-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
-206            android:exported="false"
-206-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
-207            android:fitsSystemWindows="true"
-207-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
-208            android:theme="@style/Theme.Hidden" >
-208-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
-209        </activity>
-210        <activity
-210-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:23:9-27:75
-211            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-211-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:24:13-93
-212            android:excludeFromRecents="true"
-212-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:25:13-46
-213            android:exported="false"
-213-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:26:13-37
-214            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-214-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:27:13-72
-215        <!--
-216            Service handling Google Sign-In user revocation. For apps that do not integrate with
-217            Google Sign-In, this service will never be started.
-218        -->
-219        <service
-219-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:33:9-37:51
-220            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-220-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:34:13-89
-221            android:exported="true"
-221-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:35:13-36
-222            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-222-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:36:13-107
-223            android:visibleToInstantApps="true" />
-223-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:37:13-48
-224
-225        <receiver
-225-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:29:9-40:20
-226            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-226-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:30:13-78
-227            android:exported="true"
-227-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:31:13-36
-228            android:permission="com.google.android.c2dm.permission.SEND" >
-228-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:32:13-73
-229            <intent-filter>
-229-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:33:13-35:29
-230                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-230-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:17-81
-230-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:25-78
-231            </intent-filter>
-232
-233            <meta-data
-233-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:37:13-39:40
-234                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
-234-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:38:17-92
-235                android:value="true" />
-235-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:39:17-37
-236        </receiver>
-237        <!--
-238             FirebaseMessagingService performs security checks at runtime,
-239             but set to not exported to explicitly avoid allowing another app to call it.
-240        -->
-241        <service
-241-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:46:9-53:19
-242            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-242-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:47:13-82
-243            android:directBootAware="true"
-243-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:48:13-43
-244            android:exported="false" >
-244-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:49:13-37
-245            <intent-filter android:priority="-500" >
-245-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:65:13-67:29
-246                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-246-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:66:17-78
-246-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:66:25-75
-247            </intent-filter>
-248        </service>
-249
-250        <activity
-250-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
-251            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-251-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:19-85
-252            android:exported="false"
-252-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:22:19-43
-253            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-253-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:21:19-78
-254
-255        <provider
-255-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
-256            android:name="com.google.firebase.provider.FirebaseInitProvider"
-256-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
-257            android:authorities="com.rawmilk.app.firebaseinitprovider"
-257-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
-258            android:directBootAware="true"
-258-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
-259            android:exported="false"
-259-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
-260            android:initOrder="100" />
-260-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
-261
-262        <meta-data
-262-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
-263            android:name="com.google.android.gms.version"
-263-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
-264            android:value="@integer/google_play_services_version" />
-264-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
-265
-266        <receiver
-266-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-267            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-267-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-268            android:directBootAware="false"
-268-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-269            android:enabled="true"
-269-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-270            android:exported="true"
-270-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-271            android:permission="android.permission.DUMP" >
-271-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-272            <intent-filter>
-272-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-273                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-273-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-273-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-274            </intent-filter>
-275            <intent-filter>
-275-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-276                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-276-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-276-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-277            </intent-filter>
-278            <intent-filter>
-278-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-279                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-279-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-279-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-280            </intent-filter>
-281            <intent-filter>
-281-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-282                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-282-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-282-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-283            </intent-filter>
-284        </receiver>
-285
-286        <service
-286-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
-287            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-287-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
-288            android:exported="false" >
-288-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
-289            <meta-data
-289-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
-290                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-290-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
-291                android:value="cct" />
-291-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
-292        </service>
-293        <service
-293-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
-294            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-294-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
-295            android:exported="false"
-295-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
-296            android:permission="android.permission.BIND_JOB_SERVICE" >
-296-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
-297        </service>
-298
-299        <receiver
-299-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
-300            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-300-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
-301            android:exported="false" />
-301-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
-302    </application>
-303
-304</manifest>
+138-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:17-76
+138-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:27-73
+139            </intent-filter>
+140        </service>
+141
+142        <!-- Native FCM Service to handle push alerts -->
+143        <service
+143-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:125:9-131:19
+144            android:name="com.rawmilk.app.MyFirebaseMessagingService"
+144-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:126:13-55
+145            android:exported="false" >
+145-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:127:13-37
+146            <intent-filter>
+146-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:128:13-130:29
+147                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+147-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:129:17-78
+147-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:129:25-75
+148            </intent-filter>
+149        </service>
+150
+151        <provider
+151-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:133:9-141:20
+152            android:name="androidx.core.content.FileProvider"
+152-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:134:13-62
+153            android:authorities="@string/providerAuthority"
+153-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:135:13-60
+154            android:exported="false"
+154-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:137:13-37
+155            android:grantUriPermissions="true" >
+155-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:136:13-47
+156            <meta-data
+156-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:138:13-140:53
+157                android:name="android.support.FILE_PROVIDER_PATHS"
+157-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:139:17-67
+158                android:resource="@xml/filepaths" />
+158-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:140:17-50
+159        </provider>
+160
+161        <activity
+161-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:29:9-46:20
+162            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+162-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:30:13-80
+163            android:excludeFromRecents="true"
+163-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:31:13-46
+164            android:exported="true"
+164-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:32:13-36
+165            android:launchMode="singleTask"
+165-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:33:13-44
+166            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+166-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:34:13-72
+167            <intent-filter>
+167-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:35:13-45:29
+168                <action android:name="android.intent.action.VIEW" />
+168-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:17-69
+168-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:25-66
+169
+170                <category android:name="android.intent.category.DEFAULT" />
+170-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:17-76
+170-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:27-73
+171                <category android:name="android.intent.category.BROWSABLE" />
+171-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:17-78
+171-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:27-75
+172
+173                <data
+173-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:108:17-110:55
+174                    android:host="firebase.auth"
+174-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:110:21-52
+175                    android:path="/"
+176                    android:scheme="genericidp" />
+176-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:109:21-43
+177            </intent-filter>
+178        </activity>
+179        <activity
+179-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:47:9-64:20
+180            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+180-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:48:13-79
+181            android:excludeFromRecents="true"
+181-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:49:13-46
+182            android:exported="true"
+182-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:50:13-36
+183            android:launchMode="singleTask"
+183-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:51:13-44
+184            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+184-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:52:13-72
+185            <intent-filter>
+185-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:53:13-63:29
+186                <action android:name="android.intent.action.VIEW" />
+186-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:17-69
+186-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:105:25-66
+187
+188                <category android:name="android.intent.category.DEFAULT" />
+188-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:17-76
+188-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:106:27-73
+189                <category android:name="android.intent.category.BROWSABLE" />
+189-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:17-78
+189-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:107:27-75
+190
+191                <data
+191-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:108:17-110:55
+192                    android:host="firebase.auth"
+192-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:110:21-52
+193                    android:path="/"
+194                    android:scheme="recaptcha" />
+194-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:109:21-43
+195            </intent-filter>
+196        </activity>
+197
+198        <service
+198-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:66:9-72:19
+199            android:name="com.google.firebase.components.ComponentDiscoveryService"
+199-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:67:13-84
+200            android:directBootAware="true"
+200-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+201            android:exported="false" >
+201-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:68:13-37
+202            <meta-data
+202-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:69:13-71:85
+203                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+203-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:70:17-109
+204                android:value="com.google.firebase.components.ComponentRegistrar" />
+204-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\d3db265a82a7d147adeb1f47dc2dff13\transformed\firebase-auth-23.0.0\AndroidManifest.xml:71:17-82
+205            <meta-data
+205-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:57:13-59:85
+206                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+206-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:58:17-122
+207                android:value="com.google.firebase.components.ComponentRegistrar" />
+207-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:59:17-82
+208            <meta-data
+208-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:60:13-62:85
+209                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+209-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:61:17-119
+210                android:value="com.google.firebase.components.ComponentRegistrar" />
+210-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:62:17-82
+211            <meta-data
+211-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+212                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+212-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+213                android:value="com.google.firebase.components.ComponentRegistrar" />
+213-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+214            <meta-data
+214-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+215                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+215-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+216                android:value="com.google.firebase.components.ComponentRegistrar" />
+216-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\266a96149bdf27b2b226053fe32f98e0\transformed\firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+217            <meta-data
+217-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+218                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+218-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+219                android:value="com.google.firebase.components.ComponentRegistrar" />
+219-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5451479f0bec930ac721b8eea088fe18\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+220            <meta-data
+220-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+221                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+221-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+222                android:value="com.google.firebase.components.ComponentRegistrar" />
+222-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+223            <meta-data
+223-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:25:13-27:85
+224                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+224-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:26:17-115
+225                android:value="com.google.firebase.components.ComponentRegistrar" />
+225-->[com.google.firebase:firebase-datatransport:18.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5d51b7139b6eff8b0191245f11ad8346\transformed\firebase-datatransport-18.2.0\AndroidManifest.xml:27:17-82
+226        </service>
+227
+228        <provider
+228-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+229            android:name="androidx.startup.InitializationProvider"
+229-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+230            android:authorities="com.rawmilk.app.androidx-startup"
+230-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+231            android:exported="false" >
+231-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+232            <meta-data
+232-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+233                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+233-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+234                android:value="androidx.startup" />
+234-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\daa344f8787c296c0ff0f99aef5d289b\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+235            <meta-data
+235-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+236                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+236-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+237                android:value="androidx.startup" />
+237-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\7a505cca139dee9c13ba174f9ec831ef\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+238            <meta-data
+238-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+239                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+239-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+240                android:value="androidx.startup" />
+240-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+241        </provider>
+242
+243        <service
+243-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+244            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+244-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+245            android:enabled="true"
+245-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+246            android:exported="false" >
+246-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+247            <meta-data
+247-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+248                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+248-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+249                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+249-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+250        </service>
+251
+252        <activity
+252-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+253            android:name="androidx.credentials.playservices.HiddenActivity"
+253-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+254            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+254-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+255            android:enabled="true"
+255-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+256            android:exported="false"
+256-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+257            android:fitsSystemWindows="true"
+257-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+258            android:theme="@style/Theme.Hidden" >
+258-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\5b35903fd355063bfe455139a9962dd6\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+259        </activity>
+260        <activity
+260-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:23:9-27:75
+261            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+261-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:24:13-93
+262            android:excludeFromRecents="true"
+262-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:25:13-46
+263            android:exported="false"
+263-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:26:13-37
+264            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+264-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:27:13-72
+265        <!--
+266            Service handling Google Sign-In user revocation. For apps that do not integrate with
+267            Google Sign-In, this service will never be started.
+268        -->
+269        <service
+269-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:33:9-37:51
+270            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+270-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:34:13-89
+271            android:exported="true"
+271-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:35:13-36
+272            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+272-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:36:13-107
+273            android:visibleToInstantApps="true" />
+273-->[com.google.android.gms:play-services-auth:21.2.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\111ae443fd25adbdc30e7cc9c7a270b8\transformed\play-services-auth-21.2.0\AndroidManifest.xml:37:13-48
+274
+275        <receiver
+275-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:29:9-40:20
+276            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+276-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:30:13-78
+277            android:exported="true"
+277-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:31:13-36
+278            android:permission="com.google.android.c2dm.permission.SEND" >
+278-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:32:13-73
+279            <intent-filter>
+279-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:33:13-35:29
+280                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+280-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:17-81
+280-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:34:25-78
+281            </intent-filter>
+282
+283            <meta-data
+283-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:37:13-39:40
+284                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+284-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:38:17-92
+285                android:value="true" />
+285-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:39:17-37
+286        </receiver>
+287        <!--
+288             FirebaseMessagingService performs security checks at runtime,
+289             but set to not exported to explicitly avoid allowing another app to call it.
+290        -->
+291        <service
+291-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:46:9-53:19
+292            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+292-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:47:13-82
+293            android:directBootAware="true"
+293-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:48:13-43
+294            android:exported="false" >
+294-->[com.google.firebase:firebase-messaging:24.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\05f907a795c2e8627c23b384c2a16f47\transformed\firebase-messaging-24.0.0\AndroidManifest.xml:49:13-37
+295            <intent-filter android:priority="-500" >
+295-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:128:13-130:29
+296                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+296-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:129:17-78
+296-->C:\Users\Vivek\Downloads\RawMilkTWA\app\src\main\AndroidManifest.xml:129:25-75
+297            </intent-filter>
+298        </service>
+299
+300        <activity
+300-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+301            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+301-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+302            android:exported="false"
+302-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+303            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+303-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\61bda93fa3026d54854c2eb4b533d229\transformed\play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+304
+305        <provider
+305-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+306            android:name="com.google.firebase.provider.FirebaseInitProvider"
+306-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+307            android:authorities="com.rawmilk.app.firebaseinitprovider"
+307-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+308            android:directBootAware="true"
+308-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+309            android:exported="false"
+309-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+310            android:initOrder="100" />
+310-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\b33f2f68a604f8f47b8c82ec087702f7\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+311
+312        <meta-data
+312-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+313            android:name="com.google.android.gms.version"
+313-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+314            android:value="@integer/google_play_services_version" />
+314-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\44e6c694a70d19182ce75158336fd0da\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+315
+316        <receiver
+316-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+317            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+317-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+318            android:directBootAware="false"
+318-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+319            android:enabled="true"
+319-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+320            android:exported="true"
+320-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+321            android:permission="android.permission.DUMP" >
+321-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+322            <intent-filter>
+322-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+323                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+323-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+323-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+324            </intent-filter>
+325            <intent-filter>
+325-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+326                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+326-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+326-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+327            </intent-filter>
+328            <intent-filter>
+328-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+329                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+329-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+329-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+330            </intent-filter>
+331            <intent-filter>
+331-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+332                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+332-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+332-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\ea0bcc2a3236cd8355c9b288f88565c9\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+333            </intent-filter>
+334        </receiver>
+335
+336        <service
+336-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+337            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+337-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+338            android:exported="false" >
+338-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+339            <meta-data
+339-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+340                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+340-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+341                android:value="cct" />
+341-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\18f98b3e975cd8ef4e98c06453e9501d\transformed\transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+342        </service>
+343        <service
+343-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+344            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+344-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+345            android:exported="false"
+345-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+346            android:permission="android.permission.BIND_JOB_SERVICE" >
+346-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+347        </service>
+348
+349        <receiver
+349-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+350            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+350-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+351            android:exported="false" />
+351-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Vivek\.gradle\caches\8.11.1\transforms\77adec1b37a3cb2b49d4fecaca8319c8\transformed\transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+352    </application>
+353
+354</manifest>

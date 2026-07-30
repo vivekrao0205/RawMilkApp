@@ -4608,6 +4608,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_RawMilk
+style Theme_RawMilk_NoAnimation
 style Theme_RawMilk_Splash
 style Theme_SplashScreen
 style Theme_SplashScreen_Common

@@ -30,4 +30,11 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
     </style>
+
+    <!-- Theme for Seamless TWA Launch without Activity Slide Transitions -->
+    <style name="Theme.RawMilk.NoAnimation" parent="Theme.RawMilk">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">#F4F3ED</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
 </resources>

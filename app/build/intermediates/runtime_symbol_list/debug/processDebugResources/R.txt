@@ -4607,6 +4607,7 @@ int style Theme_MaterialComponents_Light_NoActionBar_Bridge 0x7f11027a
 int style Theme_MaterialComponents_NoActionBar 0x7f11027b
 int style Theme_MaterialComponents_NoActionBar_Bridge 0x7f11027c
 int style Theme_RawMilk 0x7f11027d
+int style Theme_RawMilk_NoAnimation 0x7f110474
 int style Theme_RawMilk_Splash 0x7f11027e
 int style Theme_SplashScreen 0x7f11027f
 int style Theme_SplashScreen_Common 0x7f110280

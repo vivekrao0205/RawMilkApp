@@ -12,7 +12,7 @@
     <color name="shortcut_background">#F5F5F5</color>
     <integer name="splashScreenFadeOutDuration">300</integer>
     <string name="appName" translatable="false">RawMilk</string>
-    <string name="assetStatements">[{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://rawmilk.in\"}},{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://www.rawmilk.in\"}}]</string>
+    <string name="assetStatements" translatable="false">[{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://rawmilk.in\"}},{\"relation\":[\"delegate_permission/common.handle_all_urls\"],\"target\":{\"namespace\":\"web\",\"site\":\"https://www.rawmilk.in\"}}]</string>
     <string name="default_web_client_id" translatable="false">294465354146-m5f5dn7ubk3m2n1fhr6ih1ie53em041f.apps.googleusercontent.com</string>
     <string name="displayMode" translatable="false">default</string>
     <string name="fallbackType" translatable="false">webview</string>
@@ -48,6 +48,11 @@
         <item name="android:windowLightNavigationBar" ns1:targetApi="27">true</item>
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowLayoutInDisplayCutoutMode" ns1:targetApi="o_mr1">shortEdges</item>
+    </style>
+    <style name="Theme.RawMilk.NoAnimation" parent="Theme.RawMilk">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowBackground">#F4F3ED</item>
+        <item name="android:windowDisablePreview">true</item>
     </style>
     <style name="Theme.RawMilk.Splash" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:windowBackground">#F4F3ED</item>

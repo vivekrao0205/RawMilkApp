@@ -218,21 +218,39 @@ class MainActivity : AppCompatActivity() {
             ?: intent?.getStringExtra("click_action") 
             ?: intent?.getStringExtra("url")
         FCMDiagnostics.log("onNewIntent: Intercepted rawUrl='$rawUrl'")
-        if (!rawUrl.isNullOrEmpty()) {
-            val launchUrl = if (rawUrl.startsWith("https://")) {
-                rawUrl
-            } else if (rawUrl.startsWith("http://")) {
-                "https://" + rawUrl.substring(7)
+        val launchUrl = getSafeLaunchUrl(rawUrl)
+        if (launchUrl != null) {
+            FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
+            webView.loadUrl(launchUrl)
+        } else {
+            FCMDiagnostics.log("onNewIntent: Blocked invalid redirect launchUrl='$rawUrl'")
+        }
+    }
+
+    private fun getSafeLaunchUrl(rawUrl: String?): String? {
+        if (rawUrl.isNullOrEmpty()) return null
+        val trimmed = rawUrl.trim()
+        if (trimmed.startsWith("javascript:", ignoreCase = true) ||
+            trimmed.startsWith("file:", ignoreCase = true) ||
+            trimmed.startsWith("content:", ignoreCase = true) ||
+            trimmed.startsWith("intent:", ignoreCase = true) ||
+            trimmed.startsWith("data:", ignoreCase = true)) {
+            return null
+        }
+        if (trimmed.startsWith("/")) {
+            return "https://www.rawmilk.in$trimmed"
+        }
+        if (trimmed.startsWith("https://", ignoreCase = true) || trimmed.startsWith("http://", ignoreCase = true)) {
+            val secureUrl = if (trimmed.startsWith("http://", ignoreCase = true)) {
+                "https://" + trimmed.substring(7)
             } else {
-                "https://www.rawmilk.in" + (if (rawUrl.startsWith("/")) "" else "/") + rawUrl
+                trimmed
             }
-            if (isValidDomain(launchUrl)) {
-                FCMDiagnostics.log("onNewIntent: Injecting notification launch URL into WebView: $launchUrl")
-                webView.loadUrl(launchUrl)
-            } else {
-                FCMDiagnostics.log("onNewIntent: Blocked invalid redirect launchUrl='$launchUrl'")
+            if (isValidDomain(secureUrl)) {
+                return secureUrl
             }
         }
+        return null
     }
 
     private fun initFirebaseNatively() {
@@ -417,7 +435,12 @@ class MainActivity : AppCompatActivity() {
         wv.webViewClient = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                // Inject script to unregister Service Worker and delete Cache Storage (Issue 1)
+                if (!isValidDomain(url)) {
+                    Log.e("RawMilkSecurity", "Blocked loading of untrusted page: $url")
+                    view?.stopLoading()
+                    view?.loadUrl("https://www.rawmilk.in/")
+                    return
+                }
                 injectCacheClearAndDisableServiceWorker(view)
             }
 
@@ -445,25 +468,12 @@ class MainActivity : AppCompatActivity() {
 
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 val url = request?.url.toString()
-                
-                if (isValidDomain(url)) {
-                    return false
-                }
-                
-                // Launch external links in custom intents safely (only http/https schemes)
-                try {
-                    val uri = Uri.parse(url)
-                    val scheme = uri.scheme
-                    if (scheme == "http" || scheme == "https") {
-                        val intent = Intent(Intent.ACTION_VIEW, uri)
-                        startActivity(intent)
-                    } else {
-                        Log.w("RawMilkAuth", "Blocked opening of unsafe scheme in intent: $url")
-                    }
-                } catch (e: Exception) {
-                    Log.e("RawMilkAuth", "Failed to open external link: $url", e)
-                }
-                return true
+                return handleExternalUrl(url)
+            }
+
+            @Suppress("DEPRECATION")
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                return handleExternalUrl(url)
             }
         }
 
@@ -709,16 +719,50 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
+    private fun handleExternalUrl(url: String?): Boolean {
+        if (url.isNullOrEmpty()) return true
+        if (isValidDomain(url)) {
+            return false // Keep internal navigation inside WebView
+        }
+        try {
+            val uri = Uri.parse(url)
+            val scheme = uri.scheme
+            if (scheme == "http" || scheme == "https") {
+                val intent = Intent(Intent.ACTION_VIEW, uri).apply {
+                    addCategory(Intent.CATEGORY_BROWSABLE)
+                    component = null
+                }
+                startActivity(intent)
+            } else {
+                Log.w("RawMilkSecurity", "Blocked opening of unsafe non-http scheme: $url")
+            }
+        } catch (e: Exception) {
+            Log.e("RawMilkSecurity", "Failed to open external link safely: $url", e)
+        }
+        return true
+    }
+
     // Inner class defining WebView JavaScript API interfaces
     @androidx.annotation.Keep
     inner class AndroidBridge {
+        private fun isCallerUrlTrusted(): Boolean {
+            val currentUrl = webView.url
+            if (currentUrl.isNullOrEmpty() || !isValidDomain(currentUrl)) {
+                Log.e("RawMilkSecurity", "Blocked AndroidBridge call from untrusted URL: $currentUrl")
+                return false
+            }
+            return true
+        }
+
         @JavascriptInterface
         fun launchGoogleSignIn() {
+            if (!isCallerUrlTrusted()) return
             triggerNativeGoogleSignIn()
         }
 
         @JavascriptInterface
         fun getFcmToken() {
+            if (!isCallerUrlTrusted()) return
             runOnUiThread {
                 requestNotificationPermissionIfNeeded()
             }
@@ -727,11 +771,13 @@ class MainActivity : AppCompatActivity() {
         
         @JavascriptInterface
         fun postNotificationPermissionRequest() {
+            if (!isCallerUrlTrusted()) return
             requestNotificationPermissionIfNeeded()
         }
 
         @JavascriptInterface
         fun checkNativeAuthSync() {
+            if (!isCallerUrlTrusted()) return
             Log.d("RawMilkAuth", "checkNativeAuthSync: JS bridge requested auth sync.")
             val sharedPrefs = getSharedPreferences("RawMilkPrefs", Context.MODE_PRIVATE)
             val userLoggedOut = sharedPrefs.getBoolean("user_logged_out", false)
@@ -752,6 +798,7 @@ class MainActivity : AppCompatActivity() {
 
         @JavascriptInterface
         fun logout() {
+            if (!isCallerUrlTrusted()) return
             Log.d("RawMilkAuth", "logout: JS bridge requested logout.")
             runOnUiThread {
                 try {

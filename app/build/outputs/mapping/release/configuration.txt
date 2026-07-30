@@ -11,6 +11,7 @@
 -keep class com.google.android.gms.auth.api.signin.RevocationBoundService { <init>(); }
 -keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity { <init>(); }
 -keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+-keep class com.google.androidbrowserhelper.trusted.DelegationService { <init>(); }
 -keep class com.google.firebase.auth.internal.GenericIdpActivity { <init>(); }
 -keep class com.google.firebase.auth.internal.RecaptchaActivity { <init>(); }
 -keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
@@ -18,7 +19,7 @@
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
 -keep class com.rawmilk.app.Application { <init>(); }
--keep class com.rawmilk.app.MainActivity { <init>(); }
+-keep class com.rawmilk.app.CustomLauncherActivity { <init>(); }
 -keep class com.rawmilk.app.MyFirebaseMessagingService { <init>(); }
 -keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
 
